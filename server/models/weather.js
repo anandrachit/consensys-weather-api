@@ -1,14 +1,15 @@
 const mongoose = require('mongoose');
 
 let weather = mongoose.model ('weather',{
-    id: {
-        type: Number,
-        required: true
-    } ,
-    date: {
-        type: Date
-    } ,
-    temprature : []
+    id: Number,
+    date:  Date,
+    location: {
+        lat: Number,
+        lon: Number,
+        city: String,
+        state: String
+    },
+    temperature: []
 
 });
 
